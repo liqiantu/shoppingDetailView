@@ -33,7 +33,7 @@
 - (void)enterDetail
 {
     [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        _webView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        _webView.frame = CGRectMake(0, 22, self.view.frame.size.width, self.view.frame.size.height);
         _tableView.frame = CGRectMake(0, -self.view.frame.size.height , self.view.frame.size.width, self.view.frame.size.height);
     } completion:^(BOOL finished) {
         
@@ -81,7 +81,7 @@
     }
 }
 
-//
+// tableView scrollView 代理
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     CGFloat offsetY = scrollView.contentOffset.y;
     
